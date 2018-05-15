@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"
+          href="../../css/main.css" />
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Menu Item</h1>
+        <table>
+            <thead>
+                <td>Name</td>
+                <td>Price</td>
+            </thead>
+            <th:block th:each="menu : ${menuItems}">
+                <tr>
+                    <td th:text="${menu.name}">...</td>
+                    <td th:text="${menu.price}">...</td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<script type="text/javascript"
+        src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
